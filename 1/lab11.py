@@ -34,7 +34,9 @@ def area(polygon: list[Point]) -> float:
 
 
 def point_in_polygon(px: float, py: float, polygon: list[Point]) -> bool:
-    count = 0
+    count = sum([1 for i in range(len(polygon)) if
+                 min(polygon[i - 1][1], polygon[i][1]) < py <= max(polygon[i - 1][1], polygon[i][1]) and
+                 px < ((py - polygon[i - 1][1]) * (polygon[i][0] - polygon[i-1][0]) / (polygon[i][1] - polygon[i-1][1]) +polygon[i-1][0] )])
 
 
 
@@ -51,8 +53,11 @@ def ex1():
 
 
 def ex2():
-
-
+    polygon = [(0, 0), (4, 0), (4, 2), (2, 2), (2, 4), (0, 4)]
+    point_in_polygon(1, 1, polygon)
+    point_in_polygon(3, 3, polygon)
+    point_in_polygon(5, 1, polygon)
+    point_in_polygon(1, 3, polygon)
 
 if __name__ == "__main__":
-    ex1()
+    ex2()
