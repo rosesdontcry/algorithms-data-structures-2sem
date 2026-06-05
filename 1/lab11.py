@@ -40,6 +40,7 @@ def point_in_polygon(px: float, py: float, polygon: list[Point]) -> bool:
 
 
 
+
 def ex1():
     rectangle = [(0, 0), (5, 0), (5, 3), (0, 3)]
     print(f"Rectangle {rectangle}:\n"
