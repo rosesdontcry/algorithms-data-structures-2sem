@@ -1,0 +1,14 @@
+﻿__pycache__/
+*.pyc
+venv/
+.venv/
+*.egg-info/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
